@@ -110,7 +110,7 @@ NDRefresh is available through [Carthage](https://github.com/Carthage/Carthage),
 Add the `NDRefresh/NDRefresh/NDRefreshControl.swift` into your project.
 
 ## Requirements
-* Xcode 6.0+
+* Xcode 6.3+
 * iOS 8.0+
 
 ## License
