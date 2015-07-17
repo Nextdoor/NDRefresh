@@ -1,0 +1,32 @@
+<script>
+    function startTime() {document.getElementById('time').innerHTML = new Date();}
+    setInterval(startTime, 1);
+    startTime();
+    </script>
+<style>
+    body {
+        display: -webkit-flex;
+        font-size: 30px;
+        -webkit-flex-direction: column;
+        -webkit-justify-content: center;
+        -webkit-animation: springy 2s infinite;
+    }
+table {
+    width: auto;
+    margin: auto;
+    font-size: 30px;
+}
+@-webkit-keyframes springy {
+    50% {
+        -webkit-transform: scale(1.2, 1.2);
+    }
+}
+img {
+    height: 120px;
+}
+</style>
+
+<table>
+    <td><img src="https://regmyudid.com/EMAILS/img/ios9promo/ios-9-logo.png"></td>
+    <td><div><div>New Feature!</div><div id='time'></div></div></td>
+</table>

@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6AD4D4481B55D8360004CACD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4D4471B55D8360004CACD /* main.m */; };
+		6AD4D44B1B55D8360004CACD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4D44A1B55D8360004CACD /* AppDelegate.m */; };
+		6AD4D44E1B55D8360004CACD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4D44D1B55D8360004CACD /* ViewController.m */; };
+		6AD4D4511B55D8360004CACD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4D44F1B55D8360004CACD /* Main.storyboard */; };
+		6AD4D4531B55D8360004CACD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4D4521B55D8360004CACD /* Images.xcassets */; };
+		6AD4D4561B55D8360004CACD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AD4D4541B55D8360004CACD /* LaunchScreen.xib */; };
+		6AD4D4621B55D8360004CACD /* NDRefreshObjcExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD4D4611B55D8360004CACD /* NDRefreshObjcExampleTests.m */; };
+		6AD4D4701B55E8920004CACD /* NDRefresh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD4D46F1B55E8920004CACD /* NDRefresh.framework */; };
+		6AD4D4711B55E8920004CACD /* NDRefresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD4D46F1B55E8920004CACD /* NDRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6AE026451B588A2E00A29608 /* MultiViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE026441B588A2E00A29608 /* MultiViewDemoViewController.m */; };
+		6AE026481B588B2300A29608 /* MultiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE026471B588B2300A29608 /* MultiView.m */; };
+		6AE0264C1B58972000A29608 /* MultiViewObjc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6AE0264B1B58972000A29608 /* MultiViewObjc.xib */; };
+		6AE42C941B5885E5000094FB /* UIWebViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AE42C931B5885E5000094FB /* UIWebViewDemoViewController.m */; };
+		6AE42C961B588794000094FB /* sample.html in Resources */ = {isa = PBXBuildFile; fileRef = 6AE42C951B588794000094FB /* sample.html */; };
+		B846634D1B58920500AA5018 /* UIImageViewDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B846634C1B58920500AA5018 /* UIImageViewDemoViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AD4D45C1B55D8360004CACD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6AD4D43A1B55D8360004CACD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6AD4D4411B55D8360004CACD;
+			remoteInfo = NDRefreshObjcExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6AD4D4721B55E8920004CACD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6AD4D4711B55E8920004CACD /* NDRefresh.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6AD4D4421B55D8360004CACD /* NDRefreshObjcExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NDRefreshObjcExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD4D4461B55D8360004CACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AD4D4471B55D8360004CACD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6AD4D4491B55D8360004CACD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6AD4D44A1B55D8360004CACD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6AD4D44C1B55D8360004CACD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6AD4D44D1B55D8360004CACD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6AD4D4501B55D8360004CACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6AD4D4521B55D8360004CACD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6AD4D4551B55D8360004CACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6AD4D45B1B55D8360004CACD /* NDRefreshObjcExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NDRefreshObjcExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD4D4601B55D8360004CACD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6AD4D4611B55D8360004CACD /* NDRefreshObjcExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NDRefreshObjcExampleTests.m; sourceTree = "<group>"; };
+		6AD4D46F1B55E8920004CACD /* NDRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NDRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AE026431B588A2E00A29608 /* MultiViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiViewDemoViewController.h; sourceTree = "<group>"; };
+		6AE026441B588A2E00A29608 /* MultiViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiViewDemoViewController.m; sourceTree = "<group>"; };
+		6AE026461B588B2300A29608 /* MultiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiView.h; sourceTree = "<group>"; };
+		6AE026471B588B2300A29608 /* MultiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiView.m; sourceTree = "<group>"; };
+		6AE0264B1B58972000A29608 /* MultiViewObjc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MultiViewObjc.xib; path = ../MultiViewObjc.xib; sourceTree = "<group>"; };
+		6AE42C921B5885E5000094FB /* UIWebViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebViewDemoViewController.h; sourceTree = "<group>"; };
+		6AE42C931B5885E5000094FB /* UIWebViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebViewDemoViewController.m; sourceTree = "<group>"; };
+		6AE42C951B588794000094FB /* sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
+		B846634B1B58920500AA5018 /* UIImageViewDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIImageViewDemoViewController.h; sourceTree = "<group>"; };
+		B846634C1B58920500AA5018 /* UIImageViewDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIImageViewDemoViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6AD4D43F1B55D8360004CACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD4D4701B55E8920004CACD /* NDRefresh.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD4D4581B55D8360004CACD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AD4D4391B55D8360004CACD = {
+			isa = PBXGroup;
+			children = (
+				6AD4D46F1B55E8920004CACD /* NDRefresh.framework */,
+				6AD4D4441B55D8360004CACD /* NDRefreshObjcExample */,
+				6AD4D45E1B55D8360004CACD /* NDRefreshObjcExampleTests */,
+				6AD4D4431B55D8360004CACD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6AD4D4431B55D8360004CACD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6AD4D4421B55D8360004CACD /* NDRefreshObjcExample.app */,
+				6AD4D45B1B55D8360004CACD /* NDRefreshObjcExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6AD4D4441B55D8360004CACD /* NDRefreshObjcExample */ = {
+			isa = PBXGroup;
+			children = (
+				6AE026401B5889EF00A29608 /* MultiView */,
+				B846634A1B5891CA00AA5018 /* UIImageView */,
+				6AE42C911B588250000094FB /* UIWebView */,
+				6AD4D4491B55D8360004CACD /* AppDelegate.h */,
+				6AD4D44A1B55D8360004CACD /* AppDelegate.m */,
+				6AD4D44C1B55D8360004CACD /* ViewController.h */,
+				6AD4D44D1B55D8360004CACD /* ViewController.m */,
+				6AD4D44F1B55D8360004CACD /* Main.storyboard */,
+				6AD4D4521B55D8360004CACD /* Images.xcassets */,
+				6AD4D4541B55D8360004CACD /* LaunchScreen.xib */,
+				6AD4D4451B55D8360004CACD /* Supporting Files */,
+			);
+			path = NDRefreshObjcExample;
+			sourceTree = "<group>";
+		};
+		6AD4D4451B55D8360004CACD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AE42C951B588794000094FB /* sample.html */,
+				6AD4D4461B55D8360004CACD /* Info.plist */,
+				6AD4D4471B55D8360004CACD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AD4D45E1B55D8360004CACD /* NDRefreshObjcExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AD4D4611B55D8360004CACD /* NDRefreshObjcExampleTests.m */,
+				6AD4D45F1B55D8360004CACD /* Supporting Files */,
+			);
+			path = NDRefreshObjcExampleTests;
+			sourceTree = "<group>";
+		};
+		6AD4D45F1B55D8360004CACD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6AD4D4601B55D8360004CACD /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6AE026401B5889EF00A29608 /* MultiView */ = {
+			isa = PBXGroup;
+			children = (
+				6AE0264B1B58972000A29608 /* MultiViewObjc.xib */,
+				6AE026431B588A2E00A29608 /* MultiViewDemoViewController.h */,
+				6AE026441B588A2E00A29608 /* MultiViewDemoViewController.m */,
+				6AE026461B588B2300A29608 /* MultiView.h */,
+				6AE026471B588B2300A29608 /* MultiView.m */,
+			);
+			name = MultiView;
+			sourceTree = "<group>";
+		};
+		6AE42C911B588250000094FB /* UIWebView */ = {
+			isa = PBXGroup;
+			children = (
+				6AE42C921B5885E5000094FB /* UIWebViewDemoViewController.h */,
+				6AE42C931B5885E5000094FB /* UIWebViewDemoViewController.m */,
+			);
+			name = UIWebView;
+			sourceTree = "<group>";
+		};
+		B846634A1B5891CA00AA5018 /* UIImageView */ = {
+			isa = PBXGroup;
+			children = (
+				B846634B1B58920500AA5018 /* UIImageViewDemoViewController.h */,
+				B846634C1B58920500AA5018 /* UIImageViewDemoViewController.m */,
+			);
+			name = UIImageView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6AD4D4411B55D8360004CACD /* NDRefreshObjcExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD4D4651B55D8360004CACD /* Build configuration list for PBXNativeTarget "NDRefreshObjcExample" */;
+			buildPhases = (
+				6AD4D43E1B55D8360004CACD /* Sources */,
+				6AD4D43F1B55D8360004CACD /* Frameworks */,
+				6AD4D4401B55D8360004CACD /* Resources */,
+				6AD4D4721B55E8920004CACD /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NDRefreshObjcExample;
+			productName = NDRefreshObjcExample;
+			productReference = 6AD4D4421B55D8360004CACD /* NDRefreshObjcExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6AD4D45A1B55D8360004CACD /* NDRefreshObjcExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AD4D4681B55D8360004CACD /* Build configuration list for PBXNativeTarget "NDRefreshObjcExampleTests" */;
+			buildPhases = (
+				6AD4D4571B55D8360004CACD /* Sources */,
+				6AD4D4581B55D8360004CACD /* Frameworks */,
+				6AD4D4591B55D8360004CACD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AD4D45D1B55D8360004CACD /* PBXTargetDependency */,
+			);
+			name = NDRefreshObjcExampleTests;
+			productName = NDRefreshObjcExampleTests;
+			productReference = 6AD4D45B1B55D8360004CACD /* NDRefreshObjcExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6AD4D43A1B55D8360004CACD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Nextdoor, Inc";
+				TargetAttributes = {
+					6AD4D4411B55D8360004CACD = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					6AD4D45A1B55D8360004CACD = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 6AD4D4411B55D8360004CACD;
+					};
+				};
+			};
+			buildConfigurationList = 6AD4D43D1B55D8360004CACD /* Build configuration list for PBXProject "NDRefreshObjcExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6AD4D4391B55D8360004CACD;
+			productRefGroup = 6AD4D4431B55D8360004CACD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6AD4D4411B55D8360004CACD /* NDRefreshObjcExample */,
+				6AD4D45A1B55D8360004CACD /* NDRefreshObjcExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6AD4D4401B55D8360004CACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE42C961B588794000094FB /* sample.html in Resources */,
+				6AD4D4511B55D8360004CACD /* Main.storyboard in Resources */,
+				6AD4D4561B55D8360004CACD /* LaunchScreen.xib in Resources */,
+				6AD4D4531B55D8360004CACD /* Images.xcassets in Resources */,
+				6AE0264C1B58972000A29608 /* MultiViewObjc.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD4D4591B55D8360004CACD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6AD4D43E1B55D8360004CACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AE026451B588A2E00A29608 /* MultiViewDemoViewController.m in Sources */,
+				6AD4D44E1B55D8360004CACD /* ViewController.m in Sources */,
+				6AD4D44B1B55D8360004CACD /* AppDelegate.m in Sources */,
+				6AD4D4481B55D8360004CACD /* main.m in Sources */,
+				6AE026481B588B2300A29608 /* MultiView.m in Sources */,
+				B846634D1B58920500AA5018 /* UIImageViewDemoViewController.m in Sources */,
+				6AE42C941B5885E5000094FB /* UIWebViewDemoViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AD4D4571B55D8360004CACD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AD4D4621B55D8360004CACD /* NDRefreshObjcExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AD4D45D1B55D8360004CACD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6AD4D4411B55D8360004CACD /* NDRefreshObjcExample */;
+			targetProxy = 6AD4D45C1B55D8360004CACD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6AD4D44F1B55D8360004CACD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AD4D4501B55D8360004CACD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6AD4D4541B55D8360004CACD /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6AD4D4551B55D8360004CACD /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6AD4D4631B55D8360004CACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6AD4D4641B55D8360004CACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6AD4D4661B55D8360004CACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = NDRefreshObjcExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6AD4D4671B55D8360004CACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = NDRefreshObjcExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6AD4D4691B55D8360004CACD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NDRefreshObjcExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NDRefreshObjcExample.app/NDRefreshObjcExample";
+			};
+			name = Debug;
+		};
+		6AD4D46A1B55D8360004CACD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NDRefreshObjcExampleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NDRefreshObjcExample.app/NDRefreshObjcExample";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6AD4D43D1B55D8360004CACD /* Build configuration list for PBXProject "NDRefreshObjcExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD4D4631B55D8360004CACD /* Debug */,
+				6AD4D4641B55D8360004CACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AD4D4651B55D8360004CACD /* Build configuration list for PBXNativeTarget "NDRefreshObjcExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD4D4661B55D8360004CACD /* Debug */,
+				6AD4D4671B55D8360004CACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AD4D4681B55D8360004CACD /* Build configuration list for PBXNativeTarget "NDRefreshObjcExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AD4D4691B55D8360004CACD /* Debug */,
+				6AD4D46A1B55D8360004CACD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6AD4D43A1B55D8360004CACD /* Project object */;
+}

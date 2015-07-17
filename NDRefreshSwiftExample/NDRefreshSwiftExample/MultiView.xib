@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MultiView" customModule="NDRefreshSwiftExample" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="deJ-Nx-6BX">
+                    <rect key="frame" x="246" y="550" width="20" height="20"/>
+                </activityIndicatorView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Car" translatesAutoresizingMaskIntoConstraints="NO" id="aSf-ho-5BW">
+                    <rect key="frame" x="8" y="567" width="89" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="89" id="oCy-hB-nZH"/>
+                        <constraint firstAttribute="height" constant="33" id="v3u-IE-rgo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mv-CD-KES">
+                    <rect key="frame" x="274" y="549" width="82" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="0Mv-CD-KES" firstAttribute="leading" secondItem="deJ-Nx-6BX" secondAttribute="trailing" constant="8" id="5NC-vX-f2A"/>
+                <constraint firstItem="aSf-ho-5BW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="5br-IT-GdP"/>
+                <constraint firstAttribute="bottom" secondItem="deJ-Nx-6BX" secondAttribute="bottom" constant="30" id="9vs-k6-aqB"/>
+                <constraint firstAttribute="bottom" secondItem="aSf-ho-5BW" secondAttribute="bottom" id="mxP-CS-fM5"/>
+                <constraint firstAttribute="bottom" secondItem="0Mv-CD-KES" secondAttribute="bottom" constant="30" id="nlF-Ox-QV6"/>
+                <constraint firstAttribute="centerX" secondItem="0Mv-CD-KES" secondAttribute="centerX" constant="-15" id="yCQ-lU-SHW"/>
+            </constraints>
+            <connections>
+                <outlet property="car" destination="aSf-ho-5BW" id="2zf-1M-Djr"/>
+                <outlet property="spinner" destination="deJ-Nx-6BX" id="TJF-TJ-Ujq"/>
+                <outlet property="title" destination="0Mv-CD-KES" id="cfG-Sw-n83"/>
+            </connections>
+            <point key="canvasLocation" x="896" y="527"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Car" width="340" height="111"/>
+    </resources>
+</document>
