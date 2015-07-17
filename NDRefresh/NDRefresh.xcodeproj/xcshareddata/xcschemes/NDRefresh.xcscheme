@@ -28,7 +28,26 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "6A2602121B55D20E007B97F0"
+               BuildableName = "NDRefreshTests.xctest"
+               BlueprintName = "NDRefreshTests"
+               ReferencedContainer = "container:NDRefresh.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "6A2602071B55D20E007B97F0"
+            BuildableName = "NDRefresh.framework"
+            BlueprintName = "NDRefresh"
+            ReferencedContainer = "container:NDRefresh.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
