@@ -1,6 +1,6 @@
 # NDRefresh
 
-![Apache](https://img.shields.io/hexpm/l/plug.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Nextdoor/NDRefresh)
+![Apache](https://img.shields.io/hexpm/l/plug.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Nextdoor/NDRefresh) [![Build Status](https://travis-ci.org/Nextdoor/NDRefresh.svg?branch=master)](https://travis-ci.org/Nextdoor/NDRefresh)
 
 NDRefresh is a flexiable custom pull-to-refresh control for [UIScrollView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIScrollView_Class/) of iOS apps. It's written in Swift, but it can be used in both Swift and Objective-C projects.
 
