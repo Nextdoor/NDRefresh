@@ -69,6 +69,39 @@ class NDRefreshControlTests: XCTestCase {
         XCTAssert(CGRectGetWidth(refreshView!.bounds) != 10.0, "Width should have been adjusted")
     }
 
+    func testEndRefresh() {
+        let expectation = expectationWithDescription("End refresh")
+        self.scrollView!.contentOffset = CGPointMake(0, 20)
+        self.scrollView!.contentInset = UIEdgeInsetsMake(30, 0, 0, 0)
+
+        refreshControl?.endRefresh()
+
+        expectation.fulfill()
+        waitForExpectationsWithTimeout(0.5) {
+            error in
+            // Verify that contentOffset and contentInset are set back to the original state.
+            XCTAssertEqual(self.scrollView!.contentOffset.y, 0.0)
+            XCTAssertEqual(self.scrollView!.contentInset.top, 0.0)
+        }
+    }
+
+    // MARK: - State transition related tests
+
+    func testRefreshing() {
+        let expectation = expectationWithDescription("Refreshing")
+
+        refreshControl?.refreshState = .Refreshing
+
+        expectation.fulfill()
+        waitForExpectationsWithTimeout(0.5) {
+            error in
+            // Verify that contentOffset and contentInset are set back to the original state.
+            XCTAssertEqual(self.scrollView!.contentOffset.y, -CGRectGetHeight(self.refreshView!.bounds))
+            XCTAssertEqual(self.scrollView!.contentInset.top, CGRectGetHeight(self.refreshView!.bounds))
+
+        }
+    }
+
     // MARK: - Closure related tests
 
     func closureSetup() {
@@ -170,5 +203,14 @@ class NDRefreshControlTests: XCTestCase {
         refreshControl.refreshState = .Pulling
         scrollView.contentOffset = CGPointMake(0, -10)
         XCTAssert(refreshControl.refreshState == .Idle, "The refresh state should be reset idle")
+    }
+
+    func testChangeStateToRefreshing() {
+        let scrollView = DraggableScrollView(frame: scrollViewFrame)
+        scrollView.draggingState = false
+        let refreshControl = NDRefreshControl(refreshView: refreshView!, scrollView: scrollView)
+        refreshControl.refreshState = .ReadyForRefresh
+        scrollView.contentOffset = CGPointMake(0, -10)
+        XCTAssert(refreshControl.refreshState == .Refreshing, "The refresh state should be reset idle")
     }
 }
