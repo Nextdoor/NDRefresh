@@ -34,11 +34,9 @@ class NDRefreshControlTests: XCTestCase {
         refreshControl = NDRefreshControl(refreshView: refreshView!,
             scrollView: scrollView!)
     }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
-    
+
+    // MARK: - Public method tests
+
     func testBeginRefreshIdleToRefreshing() {
         refreshControl?.beginRefresh()
         if let state = refreshControl?.refreshState {
@@ -58,5 +56,119 @@ class NDRefreshControlTests: XCTestCase {
         } else {
             XCTFail("Can't reach here!")
         }
-    }    
+    }
+
+    func testConfigureForRefresh() {
+        var frame = refreshView!.frame
+        frame.size.width = 10.0
+        refreshView!.frame = frame
+
+        // Verify that refresh view frame is modified after configuration.
+        XCTAssert(CGRectGetWidth(refreshView!.bounds) == 10.0, "Width should be 0")
+        refreshControl?.configureForRefresh()
+        XCTAssert(CGRectGetWidth(refreshView!.bounds) != 10.0, "Width should have been adjusted")
+    }
+
+    // MARK: - Closure related tests
+
+    func closureSetup() {
+        // Set up the closures for guarding purpose.
+
+        let defaultClosure: (refreshControl: NDRefreshControl) -> () = {
+            refreshControl in
+            XCTFail("Should not be called")
+        }
+        refreshControl?.renderIdleClosure = defaultClosure
+        refreshControl?.renderTriggeredClosure = defaultClosure
+        refreshControl?.renderPullingClosure = defaultClosure
+        refreshControl?.renderReadyForRefreshClosure = defaultClosure
+        refreshControl?.renderRefreshClosure = defaultClosure
+    }
+
+    func testClosureInvocation(inout closureReference: ((refreshControl: NDRefreshControl) -> ())?,
+        state: NDRefreshControlState) {
+        closureSetup()
+
+        var called = false
+        closureReference = {
+            refreshControl in
+            called = true
+        }
+        refreshControl?.refreshState = state
+        XCTAssertTrue(called, "The closure should have been called")
+    }
+
+    func testIdleStateChange() {
+        testClosureInvocation(&(refreshControl!.renderIdleClosure), state: NDRefreshControlState.Idle)
+    }
+
+    func testTriggeredStateChange() {
+        testClosureInvocation(&(refreshControl!.renderTriggeredClosure), state: NDRefreshControlState.Triggered)
+    }
+
+    func testPullingStateChange() {
+        testClosureInvocation(&(refreshControl!.renderPullingClosure), state: NDRefreshControlState.Pulling)
+    }
+
+    func testReadyForRefreshStateChange() {
+        testClosureInvocation(&(refreshControl!.renderReadyForRefreshClosure),
+            state: NDRefreshControlState.ReadyForRefresh)
+    }
+
+    func testRefreshingStateChange() {
+        testClosureInvocation(&(refreshControl!.renderRefreshClosure),
+            state: NDRefreshControlState.Refreshing)
+    }
+
+    // MARK: - Content offset releated tests
+
+    class DraggableScrollView: UIScrollView {
+        var draggingState = true
+        override var dragging: Bool {
+            get {
+                return draggingState
+            }
+        }
+    }
+
+    func testChangeStateToTriggered() {
+        let scrollView = DraggableScrollView(frame: scrollViewFrame)
+        let refreshControl = NDRefreshControl(refreshView: refreshView!, scrollView: scrollView)
+        refreshControl.refreshState = .Idle
+        scrollView.contentOffset = CGPointMake(0, -100)
+        XCTAssert(refreshControl.refreshState == .Triggered, "The refresh state should be triggered")
+    }
+
+    func testChangeStateToPulling() {
+        let scrollView = DraggableScrollView(frame: scrollViewFrame)
+        let refreshControl = NDRefreshControl(refreshView: refreshView!, scrollView: scrollView)
+        refreshControl.refreshState = .Triggered
+        scrollView.contentOffset = CGPointMake(0, -100)
+        XCTAssert(refreshControl.refreshState == .Pulling, "The refresh state should be pulling")
+    }
+
+    func testChangeStateToReadyForRefresh() {
+        let scrollView = DraggableScrollView(frame: scrollViewFrame)
+        let refreshControl = NDRefreshControl(refreshView: refreshView!, scrollView: scrollView)
+        refreshControl.refreshState = .Pulling
+        scrollView.contentOffset = CGPointMake(0, -CGRectGetHeight(refreshView!.bounds))
+        XCTAssert(refreshControl.refreshState == .ReadyForRefresh , "The refresh state should be ready for refresh")
+    }
+
+    func testChangeStateToPullingFromReadyForRefresh() {
+        let scrollView = DraggableScrollView(frame: scrollViewFrame)
+        let refreshControl = NDRefreshControl(refreshView: refreshView!, scrollView: scrollView)
+        refreshControl.refreshState = .ReadyForRefresh
+        scrollView.contentOffset = CGPointMake(0, -10)
+        XCTAssert(refreshControl.refreshState == .Pulling, "The refresh state should be switched back to pulling")
+    }
+
+    func testChangeStateToIdle() {
+        let scrollView = DraggableScrollView(frame: scrollViewFrame)
+        scrollView.draggingState = false
+        let refreshControl = NDRefreshControl(refreshView: refreshView!, scrollView: scrollView)
+        refreshControl.refreshState = .Pulling
+        scrollView.contentOffset = CGPointMake(0, -10)
+        XCTAssert(refreshControl.refreshState == .Idle, "The refresh state should be reset idle")
+    }
 }
