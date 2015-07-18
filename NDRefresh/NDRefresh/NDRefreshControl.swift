@@ -59,8 +59,7 @@ public class NDRefreshControl: NSObject {
             case .Refreshing:
                 // Keep the refresh view visible by creating an scroll view inset.
                 UIView.animateWithDuration(animationInterval) {
-                    self.scrollView!.contentOffset.y = self.originalYOffset -
-                        CGRectGetHeight(self.refreshView.bounds)
+                    self.scrollView!.contentOffset.y = self.originalYOffset - CGRectGetHeight(self.refreshView.bounds)
                     self.scrollView!.contentInset.top = CGRectGetHeight(self.refreshView.bounds) + self.originalInsetTop
                 }
                 renderRefreshClosure?(refreshControl: self)
