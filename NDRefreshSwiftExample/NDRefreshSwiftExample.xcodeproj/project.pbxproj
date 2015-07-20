@@ -17,10 +17,13 @@
 		6AD4D46D1B55E7250004CACD /* NDRefresh.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD4D46B1B55E7250004CACD /* NDRefresh.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6AE42C8B1B581E27000094FB /* UIImageViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE42C8A1B581E27000094FB /* UIImageViewDemoViewController.swift */; };
 		6AE42C8D1B581E35000094FB /* UIWebViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AE42C8C1B581E35000094FB /* UIWebViewDemoViewController.swift */; };
+		6AE42C901B586C60000094FB /* sample.html in Resources */ = {isa = PBXBuildFile; fileRef = 6AE42C8F1B586C60000094FB /* sample.html */; };
 		B846633F1B58686E00AA5018 /* MultiViewDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B846633E1B58686E00AA5018 /* MultiViewDemoViewController.swift */; };
 		B84663451B586A4E00AA5018 /* MultiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84663441B586A4E00AA5018 /* MultiView.swift */; };
 		B84663491B586F8500AA5018 /* MultiView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B84663481B586F8500AA5018 /* MultiView.xib */; };
-		6AE42C901B586C60000094FB /* sample.html in Resources */ = {isa = PBXBuildFile; fileRef = 6AE42C8F1B586C60000094FB /* sample.html */; };
+		B8E905BA1B5C9F8400DE07F9 /* SplitDotDemoViewControlloer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E905B91B5C9F8400DE07F9 /* SplitDotDemoViewControlloer.swift */; };
+		B8E905C81B5CAB2700DE07F9 /* SplitDotView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B8E905C61B5CAB2700DE07F9 /* SplitDotView.xib */; };
+		B8E905C91B5CAB2700DE07F9 /* SplitDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E905C71B5CAB2700DE07F9 /* SplitDotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +64,13 @@
 		6AD4D46B1B55E7250004CACD /* NDRefresh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = NDRefresh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AE42C8A1B581E27000094FB /* UIImageViewDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewDemoViewController.swift; sourceTree = "<group>"; };
 		6AE42C8C1B581E35000094FB /* UIWebViewDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewDemoViewController.swift; sourceTree = "<group>"; };
+		6AE42C8F1B586C60000094FB /* sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
 		B846633E1B58686E00AA5018 /* MultiViewDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiViewDemoViewController.swift; sourceTree = "<group>"; };
 		B84663441B586A4E00AA5018 /* MultiView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiView.swift; sourceTree = "<group>"; };
 		B84663481B586F8500AA5018 /* MultiView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiView.xib; sourceTree = "<group>"; };
-		6AE42C8F1B586C60000094FB /* sample.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample.html; sourceTree = "<group>"; };
+		B8E905B91B5C9F8400DE07F9 /* SplitDotDemoViewControlloer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitDotDemoViewControlloer.swift; sourceTree = "<group>"; };
+		B8E905C61B5CAB2700DE07F9 /* SplitDotView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplitDotView.xib; sourceTree = "<group>"; };
+		B8E905C71B5CAB2700DE07F9 /* SplitDotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitDotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,7 @@
 		6A26022F1B55D237007B97F0 /* NDRefreshSwiftExample */ = {
 			isa = PBXGroup;
 			children = (
+				B8E905B41B5C9EFA00DE07F9 /* SplitDotView */,
 				B84663431B586A3300AA5018 /* MultiView */,
 				B84663421B586A2A00AA5018 /* UIWebView */,
 				B84663411B586A1D00AA5018 /* UIImageView */,
@@ -179,6 +186,16 @@
 				B84663481B586F8500AA5018 /* MultiView.xib */,
 			);
 			name = MultiView;
+			sourceTree = "<group>";
+		};
+		B8E905B41B5C9EFA00DE07F9 /* SplitDotView */ = {
+			isa = PBXGroup;
+			children = (
+				B8E905C61B5CAB2700DE07F9 /* SplitDotView.xib */,
+				B8E905C71B5CAB2700DE07F9 /* SplitDotView.swift */,
+				B8E905B91B5C9F8400DE07F9 /* SplitDotDemoViewControlloer.swift */,
+			);
+			name = SplitDotView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B84663491B586F8500AA5018 /* MultiView.xib in Resources */,
+				B8E905C81B5CAB2700DE07F9 /* SplitDotView.xib in Resources */,
 				6AE42C901B586C60000094FB /* sample.html in Resources */,
 				6A2602381B55D237007B97F0 /* Main.storyboard in Resources */,
 				6A26023D1B55D237007B97F0 /* LaunchScreen.xib in Resources */,
@@ -288,8 +306,10 @@
 				6AE42C8B1B581E27000094FB /* UIImageViewDemoViewController.swift in Sources */,
 				B846633F1B58686E00AA5018 /* MultiViewDemoViewController.swift in Sources */,
 				B84663451B586A4E00AA5018 /* MultiView.swift in Sources */,
+				B8E905C91B5CAB2700DE07F9 /* SplitDotView.swift in Sources */,
 				6AE42C8D1B581E35000094FB /* UIWebViewDemoViewController.swift in Sources */,
 				6A2602351B55D237007B97F0 /* UILabelDemoViewController.swift in Sources */,
+				B8E905BA1B5C9F8400DE07F9 /* SplitDotDemoViewControlloer.swift in Sources */,
 				6A2602331B55D237007B97F0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -407,7 +427,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

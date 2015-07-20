@@ -88,15 +88,6 @@
                                     <segue destination="gZG-Qu-lyv" kind="show" id="WU5-pU-1s7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9q-Ka-2ld">
-                                <rect key="frame" x="245" y="314" width="111" height="30"/>
-                                <state key="normal" title="MultiView Demo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="uQr-2J-68k" kind="show" id="Nqy-D7-23t"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2om-ys-fJv">
                                 <rect key="frame" x="246" y="244" width="108" height="30"/>
                                 <state key="normal" title="WebView Demo">
@@ -106,6 +97,24 @@
                                     <segue destination="u24-AY-caY" kind="show" id="OhR-rB-nNX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgM-8l-ukz">
+                                <rect key="frame" x="243" y="384" width="114" height="30"/>
+                                <state key="normal" title="MultiPoint Demo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7Me-Mk-WpW" kind="show" id="eIE-VX-krJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9q-Ka-2ld">
+                                <rect key="frame" x="245" y="314" width="111" height="30"/>
+                                <state key="normal" title="MultiView Demo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uQr-2J-68k" kind="show" id="Nqy-D7-23t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -113,9 +122,11 @@
                             <constraint firstAttribute="centerX" secondItem="weH-8C-Wk8" secondAttribute="centerX" id="5gi-M9-Cn9"/>
                             <constraint firstItem="X9q-Ka-2ld" firstAttribute="top" secondItem="2om-ys-fJv" secondAttribute="bottom" constant="40" id="9JH-e4-z0O"/>
                             <constraint firstAttribute="centerX" secondItem="X9q-Ka-2ld" secondAttribute="centerX" id="9hL-Dd-EIc"/>
+                            <constraint firstAttribute="centerX" secondItem="XgM-8l-ukz" secondAttribute="centerX" id="KLg-Eg-sEa"/>
                             <constraint firstItem="weH-8C-Wk8" firstAttribute="top" secondItem="V76-dv-MaS" secondAttribute="bottom" constant="40" id="Kg7-fr-v9v"/>
                             <constraint firstItem="2om-ys-fJv" firstAttribute="top" secondItem="weH-8C-Wk8" secondAttribute="bottom" constant="40" id="YJQ-bI-Pbj"/>
                             <constraint firstAttribute="centerX" secondItem="2om-ys-fJv" secondAttribute="centerX" id="a13-1G-HlY"/>
+                            <constraint firstItem="XgM-8l-ukz" firstAttribute="top" secondItem="X9q-Ka-2ld" secondAttribute="bottom" constant="40" id="f7l-oe-bDh"/>
                             <constraint firstItem="V76-dv-MaS" firstAttribute="top" secondItem="NSQ-YE-AKy" secondAttribute="bottom" constant="40" id="pj3-Dj-h3q"/>
                         </constraints>
                     </view>
@@ -193,7 +204,34 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Trr-UX-v6g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141" y="323"/>
+            <point key="canvasLocation" x="-453" y="312"/>
+        </scene>
+        <!--SplitDot Demo-->
+        <scene sceneID="ihL-7K-3fl">
+            <objects>
+                <tableViewController id="7Me-Mk-WpW" customClass="SplitDotDemoViewController" customModule="NDRefreshSwiftExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="piv-Mv-aRn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DemoCell" id="EcR-Fc-7At">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EcR-Fc-7At" id="iSb-wU-dJP">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7Me-Mk-WpW" id="Ysf-2a-Nvf"/>
+                            <outlet property="delegate" destination="7Me-Mk-WpW" id="akJ-fW-maf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="SplitDot Demo" id="LF7-ie-nxI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DZI-iI-plL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="214" y="296"/>
         </scene>
     </scenes>
 </document>
