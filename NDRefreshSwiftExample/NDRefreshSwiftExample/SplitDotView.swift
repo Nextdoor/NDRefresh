@@ -34,61 +34,76 @@ class SplitDotView: UIView {
     }
     
     static func newFromNib() -> SplitDotView {
-        let views = NSBundle(forClass: SplitDotView.self).loadNibNamed("SplitDotView", owner: self, options: nil) as! [SplitDotView]
+        let views = NSBundle(forClass: SplitDotView.self).loadNibNamed("SplitDotView",
+            owner: self, options: nil) as! [SplitDotView]
         return views.first!
     }
     
     private func offsetDot(dot: UIView, xOffset: CGFloat, yOffset: CGFloat) {
-        dot.frame = CGRectMake(CGRectGetMinX(dot.frame) + xOffset, CGRectGetMinY(dot.frame) + yOffset,
-            CGRectGetWidth(dot.bounds), CGRectGetHeight(dot.bounds))
+        dot.transform = CGAffineTransformTranslate(dot.transform, xOffset, yOffset)
+    }
+
+    private func resetDot(dot: UIView) {
+        dot.transform = CGAffineTransformIdentity
     }
     
     private func animateRefreshing() {
         if !animating {
             return
         }
-        
-        let duration = 1.0
-        let delay = 0.0
-        let options = UIViewKeyframeAnimationOptions.CalculationModeLinear
-        let offset: CGFloat = 20.0
-        
-        // Spliting from one to two sets
-        UIView.animateKeyframesWithDuration(duration, delay: delay, options: options, animations: {
-            UIView.addKeyframeWithRelativeStartTime(0, relativeDuration: 1/4) {
-                self.offsetDot(self.firstDot, xOffset: -offset, yOffset: 0)
-                self.offsetDot(self.secondDot, xOffset: offset, yOffset: 0)
-                self.offsetDot(self.thirdDot, xOffset: -offset, yOffset: 0)
-                self.offsetDot(self.fourthDot, xOffset: offset, yOffset: 0)
-            }
-            
-            UIView.addKeyframeWithRelativeStartTime(1/4, relativeDuration: 1/4) {
-                self.offsetDot(self.firstDot, xOffset: 0, yOffset: -offset)
-                self.offsetDot(self.secondDot, xOffset: 0, yOffset: -offset)
-                self.offsetDot(self.thirdDot, xOffset: 0, yOffset: offset)
-                self.offsetDot(self.fourthDot, xOffset: 0, yOffset: offset)
-            }
-            
-            UIView.addKeyframeWithRelativeStartTime(2/4, relativeDuration: 1/4) {
-                self.offsetDot(self.firstDot, xOffset: 0, yOffset: offset)
-                self.offsetDot(self.secondDot, xOffset: 0, yOffset: offset)
-                self.offsetDot(self.thirdDot, xOffset: 0, yOffset: -offset)
-                self.offsetDot(self.fourthDot, xOffset: 0, yOffset: -offset)
-            }
-            
-            UIView.addKeyframeWithRelativeStartTime(3/4, relativeDuration: 1/4) {
-                self.offsetDot(self.firstDot, xOffset: offset, yOffset: 0)
-                self.offsetDot(self.secondDot, xOffset: -offset, yOffset: 0)
-                self.offsetDot(self.thirdDot, xOffset: offset, yOffset: 0)
-                self.offsetDot(self.fourthDot, xOffset: -offset, yOffset: 0)
-            }
-            }) {
-                finished in
-                self.animateRefreshing()
+
+        let options = UIViewAnimationOptions.CurveEaseOut
+        let xOffset: CGFloat = 8.0
+        let yOffset: CGFloat = 8.0
+        let springDamping: CGFloat = 0.6
+        let initialVelocity: CGFloat = 10
+
+        // Reset the dots before animating as a safe guard.
+        for dot in [firstDot, secondDot, thirdDot, fourthDot] {
+            self.resetDot(dot)
         }
+
+        UIView.animateWithDuration(0.4, delay: 0, usingSpringWithDamping: springDamping,
+            initialSpringVelocity: initialVelocity, options: options, animations: {
+            self.offsetDot(self.firstDot, xOffset: -xOffset, yOffset: 0)
+            self.offsetDot(self.secondDot, xOffset: xOffset, yOffset: 0)
+            self.offsetDot(self.thirdDot, xOffset: -xOffset, yOffset: 0)
+            self.offsetDot(self.fourthDot, xOffset: xOffset, yOffset: 0)
+        }, completion: nil)
+
+        UIView.animateWithDuration(0.4, delay: 0.5, usingSpringWithDamping: springDamping,
+            initialSpringVelocity: initialVelocity, options: options, animations: {
+            self.offsetDot(self.firstDot, xOffset: 0, yOffset: -yOffset)
+            self.offsetDot(self.secondDot, xOffset: 0, yOffset: -yOffset)
+            self.offsetDot(self.thirdDot, xOffset: 0, yOffset: yOffset)
+            self.offsetDot(self.fourthDot, xOffset: 0, yOffset: yOffset)
+        }, completion: nil)
+
+        UIView.animateWithDuration(0.4, delay: 0.9, options: options, animations: {
+            let offset: CGFloat = 8.0
+            self.offsetDot(self.firstDot, xOffset: -offset, yOffset: -offset)
+            self.offsetDot(self.secondDot, xOffset: offset, yOffset: -offset)
+            self.offsetDot(self.thirdDot, xOffset: -offset, yOffset: offset)
+            self.offsetDot(self.fourthDot, xOffset: offset, yOffset: offset)
+        }, completion: nil)
+
+        UIView.animateWithDuration(0.2, delay: 1.3, options: options, animations: {
+            self.resetDot(self.firstDot)
+            self.resetDot(self.secondDot)
+            self.resetDot(self.thirdDot)
+            self.resetDot(self.fourthDot)
+        }) {
+            finished in
+            // Perpetually animate until the flag is not set.
+            self.animateRefreshing()
+        }
+
     }
     
     func startAnimation() {
+        if animating {
+            return
+        }
         animating = true
         animateRefreshing()
     }
